@@ -9,7 +9,7 @@ import 'dotenv/config';
 const GRAPHQL_URL = 'https://aptos-testnet.nodit.io/vgXA51EJgKrO8utPGXnC1-d3~So81-a5/v1/graphql';
 // const SERVICE_ACCOUNT_PATH = './key.json';
 const METADATA_DOC_ID = 'transactions';
-const WARLORDS_CONTRACT = '0xc520f01c9c422da916ce59bb42b12e05adb19df7b5798a8e39c3dc9895741b1e';
+const WARLORDS_CONTRACT = '0xc7c5e95331b975a16f0f14982506d8df7fd42bfdae0a01d510f8ebeab69c8db7';
 const MIN_TRANSACTION_VERSION = 6136285815;
 
 const serviceAccount = {
@@ -123,7 +123,7 @@ async function getEvents(minVersion, maxVersion) {
       events(
         where: {
           transaction_version: { _gte: $minVersion, _lte: $maxVersion }
-          type: { _eq: "0xc520f01c9c422da916ce59bb42b12e05adb19df7b5798a8e39c3dc9895741b1e::warlords::AttackEvent" }
+          type: { _eq: "0xc7c5e95331b975a16f0f14982506d8df7fd42bfdae0a01d510f8ebeab69c8db7::warlords::AttackEvent" }
         }
         order_by: { transaction_version: asc }
       ) {
