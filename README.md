@@ -1,6 +1,6 @@
 We use the Indexer API for our leaderboard. The architecture is as follows: 
 
-![alt text](images/leaderboard.png)
+![alt text](image.png)
 
 1. A smart contract emits an AttackEvent with player data (attacker, defender, points, etc.).
 2. A cron job uses the Indexer API to fetch these events via a GraphQL query.
