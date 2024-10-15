@@ -181,7 +181,7 @@ async function update_points() {
 
 }
 
-//call update points every 1 hour
+//call update points every 1 minute
 cron.schedule('* * * * *', () => {
   update_points();
 });
